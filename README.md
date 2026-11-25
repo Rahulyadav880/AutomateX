@@ -168,6 +168,19 @@ bun install
 
 Bun workspaces will automatically resolve and link the `common` and `db` packages across all apps.
 
+## Workspace Commands
+
+Run these commands from the repository root:
+
+| Command | Purpose |
+|---|---|
+| `bun run dev` | Start the apps' development tasks |
+| `bun run build` | Build all configured workspaces |
+| `bun run lint` | Lint workspaces that define a lint task |
+| `bun run check-types` | Run workspace type checks |
+
+The backend and client also have app-specific scripts; see their READMEs for details.
+
 **3. Configure environment variables**
 
 ```bash

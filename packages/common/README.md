@@ -1,15 +1,17 @@
-# common
+# `common`
 
-To install dependencies:
+Shared validation schemas and trading metadata used by the AutomateX apps. Keeping these definitions in one workspace package helps the frontend and backend agree on workflow and authentication payload shapes.
 
-```bash
-bun install
+## Exports
+
+Import API schemas from the package's exported `types` subpath:
+
+```ts
+import { CreateWorkflowSchema, userSignInSchema, userSignUpSchema } from "common/types";
 ```
 
-To run:
+The schemas validate signup and signin payloads and workflow node/edge data. The package source also defines shared trading metadata, supported assets, and trigger metadata types.
 
-```bash
-bun run index.ts
-```
+## Development
 
-This project was created using `bun init` in bun v1.3.2. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+Install dependencies from the repository root with `bun install`. This package is linked into the workspace and consumed directly by the backend and client.
